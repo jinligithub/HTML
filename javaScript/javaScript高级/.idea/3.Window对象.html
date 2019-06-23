@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  id="open" type="button" value="打开新的窗口">
+<input  id="colse" type="button" value="关闭窗口">
+
+<script>
+    // alert("hello");
+    // window.alert("hahahah");
+    //
+    // var flag=confirm("what are you doing?");
+    // if(flag){
+    //     alert("welcome to you");
+    // }else{
+    //     alert("don't swin your hand");
+    // }
+    // //输入框
+    // var result=prompt("请输入用户名");
+    // alert(result);
+    //
+    // //打开新窗口
+    //
+    // var openBtn=document.getElementById("open");
+    // var newWindow;
+    // openBtn.onclick=function(){
+    //     //打开新的窗口
+    //     //open();
+    //     newWindow=open("http://www.baidu.com")
+    // }
+    //
+    // var closeBtn=document.getElementById("close");
+    // closeBtn.onclick=function(){
+    //     //关闭新的窗口
+    //     newWindow.close();
+    // }
+
+
+    // //一次性定时器
+    // setTimeout("fun();",2000);
+    // setTimeout(fun,2000);
+    // function fun() {
+    //     alert("boom~~");
+    // }
+    //
+    // //循环定时器
+    // var id =setInterval(fun,2000);
+    //
+    // //取消定时器
+    // clearTimeout(id);
+
+
+    //获取history
+    var h1=window.history;
+    var h2=history;
+    alert(h1);
+    alert(h2);
+
+    //获取document对象
+    var open=window.document.getElementById("open");
+    alert(open);
+
+</script>
+</body>
+</html>
