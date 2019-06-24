@@ -3,8 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+       // 1.失去焦点
+        document.getElementById("username").onblur=function(){
+            alert("失去焦点");
+        }
+
+        //2.加载完成事件  onload
+        window.onload=function () {
+            //1.失去焦点
+            document.getElementById("username").onblur=function(){
+                alert("失去焦点");
+            }
+            // //3.绑定鼠标事件
+            document.getElementById("username").onmouseover=function(){
+                alert("鼠标来了");
+            }
+
+            //4.绑定鼠标移动到元素之上,被点击了
+            document.getElementById("username").onmousedown=function () {
+                //alert("鼠标在上边");
+
+                //左键0  右键2 滚轮 1
+                alert(event.button);
+            }
+            // //5.鼠标从某元素移开
+            document.getElementById("username").onmouseout=function () {
+                alert("鼠标从某元素移开");
+            }
+            //6.键盘的哪个键被按了
+            document.getElementById("username").onkeydown=function () {
+                alert(event.keyCode);
+            }
+
+            // //7.内容改变
+            document.getElementById("city").onchange=function (event) {
+                alert("改变了");
+            }
+            //8.阻止表单提交1
+            document.getElementById("form").onsubmit=function () {
+                //校验用户名格式是否正确,
+                var  flag=false;//阻止事件提交
+                //var  flag=true;
+                return flag;
+            }
+
+            //9.阻止表单提交2
+            function checkForm() {
+                //return false;//阻止表单提交
+                return true;
+            }
+        }
+
+    </script>
 </head>
 <body>
+<!--
+ funtion fun(){
+ return cherkFrom();
+ }
+-->
 
+
+<form action="#" id="form" onclick="return checkForm() ;">
+<input id="username" name="username">
+<select id="city">
+    <option>--请选择--</option>
+    <option>上海</option>
+    <option>北京</option>
+    <option>深圳</option>
+
+</select>
+<input type="submit" value="提交">
+</form>
 </body>
 </html>
